@@ -142,7 +142,7 @@ module HappyMapper
           if(options[:single].nil? || options[:single])
             result = node.find_first(xpath(namespace), namespace)
           else
-            result = node.find(xpath(namespace))
+            result = node.find(xpath(namespace), namespace)
           end
           # puts "vfxn: #{xpath} #{result.inspect}"
           if result
